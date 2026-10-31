@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café Aurora | Suscripción mensual de café recién tostado</title>
+<meta name="description" content="Café de especialidad tostado la semana del envío, en tu puerta cada mes. Elige entre 3 planes, envío gratis y pausa o cancela cuando quieras.">
+<meta name="robots" content="index, follow">
+<!-- TODO: reemplaza por tu URL real de GitHub Pages -->
+<link rel="canonical" href="https://TU-USUARIO.github.io/cafe-aurora/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="Café Aurora | Café recién tostado cada mes">
+<meta property="og:description" content="3 planes, envío gratis, pausa o cancela cuando quieras.">
+<meta property="og:url" content="https://TU-USUARIO.github.io/cafe-aurora/">
+<meta property="og:image" content="https://TU-USUARIO.github.io/cafe-aurora/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"Suscripción mensual de café Café Aurora","description":"Café de especialidad recién tostado, entregado cada mes.","brand":{"@type":"Brand","name":"Café Aurora"},"offers":{"@type":"AggregateOffer","priceCurrency":"COP","lowPrice":"39900","highPrice":"119900","offerCount":"3"}}
+</script>
+<style>
+:root{--bg:#fbf5ec;--card:#fff;--ink:#2b1a12;--mute:#6b5a4e;--cta:#a94f12;--cta-d:#8a3f0c;--sage:#4f6140;--line:#e7dccd;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .5em}
+h1{font-size:clamp(2rem,6vw,3.4rem)}h2{font-size:clamp(1.5rem,4vw,2.2rem);text-align:center}
+p{margin:0 0 1em}a{color:var(--cta)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+header{position:sticky;top:0;z-index:5;background:rgba(251,245,236,.95);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:700 1.25rem Georgia,serif;text-decoration:none;color:var(--ink)}
+.btn{display:inline-block;background:var(--cta);color:#fff;border:0;border-radius:999px;padding:14px 28px;font:600 1rem inherit;font-family:inherit;cursor:pointer;text-decoration:none;min-height:48px}
+.btn:hover{background:var(--cta-d)}
+.btn:focus-visible,input:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #1d6fd6;outline-offset:2px}
+.btn.sm{padding:8px 18px;min-height:40px;font-size:.9rem}
+.btn[disabled]{opacity:.6;cursor:wait}
+.hero{text-align:center;padding:64px 0 48px}
+.hero p.lead{font-size:1.15rem;color:var(--mute);max-width:600px;margin:0 auto 1.5em}
+.eyebrow{color:var(--sage);font-weight:600;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;min-height:1.4em}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;list-style:none;padding:0;margin:22px 0 0;color:var(--mute);font-size:.92rem}
+.trust li::before{content:"✓ ";color:var(--sage);font-weight:700}
+.grid{display:grid;gap:18px;margin-top:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.card h3{font-size:1.15rem}.card p{color:var(--mute);margin:0}
+.steps{counter-reset:s}.steps .card::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--sage);color:#fff;font-weight:700;margin-bottom:12px}
+.alt{background:#f3e9da}
+.plan{display:flex;flex-direction:column;position:relative}
+.plan.pop{border:2px solid var(--cta)}
+.badge{position:absolute;top:-13px;left:24px;background:var(--cta);color:#fff;font-size:.78rem;font-weight:700;padding:3px 12px;border-radius:999px}
+.price{font:700 2rem Georgia,serif}.price small{font:400 .9rem system-ui;color:var(--mute)}
+.plan ul{padding-left:18px;margin:12px 0 20px;color:var(--mute);flex:1}
+.plan .btn{width:100%;text-align:center}
+.plan[data-sel="1"]{box-shadow:0 0 0 3px var(--sage)}
+.plan[data-sel="1"] .btn{background:var(--sage)}
+.note{text-align:center;color:var(--mute);font-size:.92rem;margin-top:18px}
+#checkout,#done{max-width:620px;margin:0 auto}
+.sum{background:#f3e9da;border-radius:var(--r);padding:16px 20px;margin-bottom:20px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.sum strong{font-size:1.1rem}
+label{display:block;font-weight:600;margin:14px 0 4px}
+input{width:100%;padding:12px 14px;font:inherit;border:1.5px solid #b9a893;border-radius:10px;background:#fff}
+input[aria-invalid="true"]{border-color:#b3261e}
+.err{color:#b3261e;font-size:.88rem;min-height:1.2em;margin:4px 0 0}
+form .btn{width:100%;margin-top:18px}
+.sim{font-size:.88rem;color:var(--mute);text-align:center;margin-top:10px}
+#done{text-align:center}#done h2{outline:none}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}details p{margin:10px 0 0;color:var(--mute)}
+footer{padding:32px 0;text-align:center;color:var(--mute);font-size:.88rem;border-top:1px solid var(--line)}
+[hidden]{display:none!important}
+@media(min-width:800px){.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.hero{padding:96px 0 64px}}
+@media(min-width:560px) and (max-width:799px){.g4{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#top">☕ Café Aurora</a>
+  <a class="btn sm" href="#planes" data-cta="header">Elegir mi plan</a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <p class="eyebrow" id="eyebrow"></p>
+  <h1>Café recién tostado en tu puerta, cada mes</h1>
+  <p class="lead">Granos de especialidad tostados la semana en que se envían. Elige tu plan en un minuto y olvídate de quedarte sin café.</p>
+  <a class="btn" href="#planes" data-cta="hero">Ver los 3 planes</a>
+  <ul class="trust">
+    <li>Pausa o cancela cuando quieras</li>
+    <li>Envío gratis</li>
+    <li>Tostado la semana del envío</li>
+  </ul>
+</div></section>
+
+<section class="alt" aria-labelledby="ben"><div class="wrap">
+  <h2 id="ben">Por qué suscribirte</h2>
+  <div class="grid g4">
+    <div class="card"><h3>Siempre fresco</h3><p>Tostamos en la semana del envío, así recibes el café en su mejor punto, no el que lleva meses en un estante.</p></div>
+    <div class="card"><h3>Sin ataduras</h3><p>Salta un mes, pausa o cancela desde un solo lugar. Sin permanencia ni letra pequeña.</p></div>
+    <div class="card"><h3>Envío gratis</h3><p>Lo que ves es lo que pagas: el envío va incluido en todos los planes.</p></div>
+    <div class="card"><h3>Descubre orígenes</h3><p>Cada mes, café de fincas colombianas seleccionadas por nuestros baristas.</p></div>
+  </div>
+</div></section>
+
+<section aria-labelledby="como"><div class="wrap">
+  <h2 id="como">Cómo funciona</h2>
+  <div class="grid g3 steps">
+    <div class="card"><h3>Elige tu plan</h3><p>Según cuánto café tomas en casa.</p></div>
+    <div class="card"><h3>Déjanos tus datos</h3><p>Solo nombre y correo. Nada más.</p></div>
+    <div class="card"><h3>Recibe y disfruta</h3><p>Tu café llega cada mes, listo para moler.</p></div>
+  </div>
+</div></section>
+
+<section class="alt" id="planes" aria-labelledby="pl"><div class="wrap">
+  <h2 id="pl">Elige tu plan mensual</h2>
+  <div class="grid g3" id="plans"></div>
+  <p class="note">Envío incluido · Pausa o cancela cuando quieras</p>
+</div></section>
+
+<section id="checkout" hidden aria-labelledby="ck"><div class="wrap">
+  <h2 id="ck">Revisa tu pedido</h2>
+  <div class="sum" aria-live="polite">
+    <div><strong id="s-name"></strong><br><span id="s-desc"></span></div>
+    <div><strong id="s-price"></strong><br><a href="#planes" id="change">Cambiar plan</a></div>
+  </div>
+  <form id="form" novalidate>
+    <label for="name">Nombre</label>
+    <input id="name" name="name" autocomplete="name" required aria-describedby="e-name">
+    <p class="err" id="e-name" role="alert"></p>
+    <label for="email">Correo electrónico</label>
+    <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+    <p class="err" id="e-email" role="alert"></p>
+    <button class="btn" type="submit" id="submit">Confirmar suscripción</button>
+    <p class="sim"><strong>Simulación:</strong> no se cobra nada ni pedimos datos de tarjeta.</p>
+  </form>
+</div></section>
+
+<section id="done" hidden aria-live="polite"><div class="wrap">
+  <h2 tabindex="-1" id="done-h">¡Suscripción confirmada, <span id="d-name"></span>! ☕</h2>
+  <div class="sum" style="justify-content:center;text-align:center"><div><strong id="d-plan"></strong><br><span id="d-price"></span></div></div>
+  <p>Esta es una demostración: la suscripción es simulada, no se realizó ningún cobro y no guardamos tus datos.</p>
+  <a class="btn" href="./">Volver al inicio</a>
+</div></section>
+
+<section aria-labelledby="faq"><div class="wrap" style="max-width:700px">
+  <h2 id="faq">Preguntas frecuentes</h2>
+  <details><summary>¿Puedo pausar o cancelar cuando quiera?</summary><p>Sí. Puedes saltar un mes, pausar o cancelar en cualquier momento, sin permanencia ni penalidades.</p></details>
+  <details><summary>¿Cuándo se hace el cobro?</summary><p>En esta demostración no se realiza ningún cobro ni se piden datos bancarios.</p></details>
+  <details><summary>¿Qué tan fresco llega el café?</summary><p>Lo tostamos la semana en que lo enviamos, para que lo recibas en su mejor momento.</p></details>
+  <details><summary>¿Qué pasa con mis datos?</summary><p>Solo usamos tu nombre para la confirmación en pantalla. No se almacenan ni se envían a herramientas de analítica.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Café Aurora — proyecto de demostración. La suscripción es simulada.</div></footer>
+
+<script>
+// ===== Configuración =====
+// Reemplaza por tu Measurement ID de GA4. Mientras sea el placeholder,
+// los eventos se muestran en la consola del navegador en vez de enviarse.
+const GA_ID = 'G-XXXXXXXXXX';
+
+const PLANS = {
+  esencial: {name:'Aurora Esencial', price:39900, desc:'1 bolsa de 250 g al mes', items:['1 bolsa de 250 g','Origen seleccionado por mes','Envío gratis'], pop:false},
+  selecta:  {name:'Aurora Selecta',  price:69900, desc:'2 bolsas de 250 g al mes', items:['2 bolsas de 250 g (2 orígenes)','Elige grano o molido','Envío gratis'], pop:true},
+  reserva:  {name:'Aurora Reserva',  price:119900, desc:'4 bolsas de 250 g al mes', items:['4 bolsas de 250 g (1 kg)','Ediciones limitadas incluidas','Envío gratis'], pop:false}
+};
+const $ = s => document.querySelector(s);
+const cop = n => new Intl.NumberFormat('es-CO',{style:'currency',currency:'COP',maximumFractionDigits:0}).format(n);
+
+// ===== Procedencia (UTM) — se conserva en sessionStorage (RN-09) =====
+const KEYS = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+let utm = {};
+try {
+  utm = JSON.parse(sessionStorage.getItem('utm') || '{}');
+  const q = new URLSearchParams(location.search), f = {};
+  KEYS.forEach(k => { if (q.get(k)) f[k] = q.get(k).toLowerCase().slice(0,60); });
+  if (!f.utm_source && q.get('gclid')) { f.utm_source = 'google'; f.utm_medium = 'cpc'; }
+  if (!Object.keys(f).length && !utm.utm_source && document.referrer) {
+    const h = new URL(document.referrer).hostname;
+    if (/instagram\.com$/.test(h)) { f.utm_source = 'instagram'; f.utm_medium = 'referral'; }
+    else if (/(^|\.)google\./.test(h)) { f.utm_source = 'google'; f.utm_medium = 'organic'; }
+  }
+  if (Object.keys(f).length) { utm = f; sessionStorage.setItem('utm', JSON.stringify(f)); }
+} catch (e) {}
+
+// ===== Analítica (nunca se envían nombre ni correo) =====
+const REAL = GA_ID !== 'G-XXXXXXXXXX';
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+if (REAL) {
+  const s = document.createElement('script');
+  s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', GA_ID, {send_page_view:false});
+}
+function track(name, p = {}) {
+  const params = Object.assign({}, utm, p);
+  gtag('event', name, params);
+  if (!REAL) console.log('[analytics]', name, params);
+}
+
+// ===== Mensaje acorde al anuncio (message match) =====
+const eb = {instagram:'Hola desde Instagram — tu café del mes te espera', google:'Lo que buscabas: café fresco cada mes'};
+$('#eyebrow').textContent = eb[utm.utm_source] || 'Suscripción mensual de café';
+
+// ===== Planes =====
+let selected = null, started = false;
+$('#plans').innerHTML = Object.entries(PLANS).map(([id,p]) => `
+  <article class="card plan${p.pop?' pop':''}" data-id="${id}">
+    ${p.pop?'<span class="badge">Más elegido</span>':''}
+    <h3>${p.name}</h3>
+    <div class="price">${cop(p.price)} <small>/ mes</small></div>
+    <ul>${p.items.map(i=>`<li>${i}</li>`).join('')}</ul>
+    <button class="btn" type="button" data-plan="${id}">Elegir ${p.name.replace('Aurora ','')}</button>
+  </article>`).join('');
+
+$('#plans').addEventListener('click', e => {
+  const b = e.target.closest('[data-plan]'); if (!b) return;
+  selected = b.dataset.plan; const p = PLANS[selected];
+  document.querySelectorAll('.plan').forEach(c => c.dataset.sel = c.dataset.id === selected ? '1' : '');
+  $('#s-name').textContent = p.name; $('#s-desc').textContent = p.desc;
+  $('#s-price').textContent = cop(p.price) + ' / mes';
+  $('#checkout').hidden = false;
+  track('plan_selected', {plan:selected, value:p.price, currency:'COP'});
+  $('#checkout').scrollIntoView({behavior:'smooth'});
+});
+
+// checkout_started: primera interacción real con el formulario
+$('#form').addEventListener('focusin', () => {
+  if (started || !selected) return; started = true;
+  track('checkout_started', {plan:selected, value:PLANS[selected].price, currency:'COP'});
+});
+
+// ===== Validación y confirmación simulada =====
+function setErr(id, msg){ const i = $('#'+id); $('#e-'+id).textContent = msg; i.setAttribute('aria-invalid', msg ? 'true' : 'false'); return !msg; }
+$('#form').addEventListener('submit', e => {
+  e.preventDefault();
+  if (!selected) { $('#planes').scrollIntoView(); return; }
+  const name = $('#name').value.trim(), email = $('#email').value.trim();
+  const okN = setErr('name', name.length < 2 ? 'Escribe tu nombre (mínimo 2 letras).' : '');
+  const okE = setErr('email', /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) ? '' : 'Escribe un correo válido, por ejemplo nombre@correo.com.');
+  if (!okN || !okE) { track('form_error', {field: !okN ? 'name' : 'email'}); (!okN ? $('#name') : $('#email')).focus(); return; }
+  const btn = $('#submit'); btn.disabled = true; btn.textContent = 'Procesando…';
+  setTimeout(() => {
+    const p = PLANS[selected];
+    $('#d-name').textContent = name.split(' ')[0];
+    $('#d-plan').textContent = p.name; $('#d-price').textContent = cop(p.price) + ' / mes';
+    $('#checkout').hidden = true; $('#done').hidden = false;
+    $('#done-h').focus(); $('#done').scrollIntoView({behavior:'smooth'});
+    track('subscription_completed', {plan:selected, value:p.price, currency:'COP'});
+  }, 900);
+});
+
+track('page_view', {page_title:document.title, page_location:location.href});
+</script>
+</body>
+</html>
